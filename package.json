@@ -1,0 +1,14 @@
+{
+  "type": "module",
+  "devDependencies": {
+    "fs-extra": "^11.3.1",
+    "vite": "^6.3.5"
+  },
+  "scripts": {
+    "build:popup": "vite build --config popup/vite.config.js",
+    "build:options": "vite build --config options/vite.config.js",
+    "build": "npm run build:popup && npm run build:options && node build.js"
+  }
+  
+  
+}
