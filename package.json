@@ -1,14 +1,19 @@
 {
   "type": "module",
   "devDependencies": {
+    "@vitejs/plugin-react": "^5.0.2",
+    "copyfiles": "^2.4.1",
     "fs-extra": "^11.3.1",
-    "vite": "^6.3.5"
+    "vite": "^6.3.6"
   },
-  "scripts": {
-    "build:popup": "vite build --config popup/vite.config.js",
-    "build:options": "vite build --config options/vite.config.js",
-    "build": "npm run build:popup && npm run build:options && node build.js"
+   "scripts": {
+  "build:popup": "vite build --config popup/vite.config.js",
+  "build:options": "vite build --config options/vite.config.js",
+  "copy:static": "copyfiles manifest.json background.js content.js icons/**/* dist",
+  "build": "npm run build:popup && npm run build:options && npm run copy:static"
+},
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
   }
-  
-  
 }

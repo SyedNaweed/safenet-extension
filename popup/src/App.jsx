@@ -41,7 +41,7 @@ export default function App() {
   return (
     <div className="p-4 bg-gray-900 text-white w-64">
       <h1 className="text-lg font-bold">SafeNet AI</h1>
-      <p>Status: <span className={status === "Safe" ? "text-green-400" : "text-red-400"}>{status}</span></p>
+      <p>Status:ßc <span className={status === "Safe" ? "text-green-400" : "text-red-400"}>{status}</span></p>
       <button 
         className="mt-3 px-3 py-1 bg-blue-500 rounded hover:bg-blue-600"
         onClick={() => setStatus(status === "Safe" ? "Phishing" : "Safe")}
