@@ -1,0 +1,7 @@
+torch
+sentence-transformers
+qdrant-client
+python-dotenv
+tqdm
+numpy
+faiss-cpu

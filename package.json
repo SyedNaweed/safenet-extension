@@ -1,0 +1,23 @@
+{
+  "type": "module",
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.0.2",
+    "copyfiles": "^2.4.1",
+    "fs-extra": "^11.3.1",
+    "rimraf": "^6.0.1",
+    "vite": "^7.1.5"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "build:popup": "vite build --config popup/vite.config.js",
+    "build:options": "vite build --config options/vite.config.js",
+    "copy:static": "copyfiles background.js content.js icons/**/* manifest.json dist",
+    "build": "npm run clean && npm run build:popup && npm run build:options && npm run copy:static"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.13",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "tailwindcss": "^4.1.13"
+  }
+}
